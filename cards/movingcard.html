@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+           
+        }
+.box{
+    width: 400px;
+    height: 203px;
+    border: 2px solid black;
+    margin: 0 auto;
+    position: relative;
+    perspective: 1000px;
+}
+.box .box-img{
+    transform: rotateY(0);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.box:hover .box-img{
+    transform: rotateY(-90deg);
+    
+}
+.box .box-img img{
+width: 100%;
+height: auto;
+}
+.box-content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgba(0,0, 0, 0.6);
+    color: white;
+    transform: rotateY(90deg);
+
+}
+.box:hover .box-content{
+    transform: rotateY(0);
+    transition:  all 0.5s ease-in-out 0s ;
+
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box-img">
+            <img src="blockchain-consists-of-these-four-main-headers.jpg" alt="" srcset="">
+        </div>
+        <div class="box-content">
+            <h1>this is project</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit saepe impedit sit eos.</p>
+        </div>
+    </div>
+</body>
+</html>
