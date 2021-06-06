@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        .main_header {
+            width: 100vw;
+            height: 100vh;
+            background: hsl(0, 0%, 94%);
+            display: grid;
+            place-items: center;
+        }
+
+        .center_div {
+            min-width: 50vw;
+            height: 40vh;
+            color: #000;
+            text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+            font-size: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        /* ul {
+            position: relative;
+            width: 80%;
+            height: 60vh;
+        } */
+
+        ul li {
+            position: absolute;
+            display: block;
+            width: 1.18rem;
+            height: 1.18rem;
+            filter: blur(2px);
+            /* animation: blinkCrsor 2s ease-in-out infinite; */
+        }
+       
+
+#ballone{
+    animation: ballo 4s ease 1s infinite;   
+}
+#ballone2{
+    animation: ballo 4s ease 1s infinite;   
+}
+
+@keyframes ballo {
+    0%{
+     y:200;
+    }
+    100%{
+    y:-10;
+    opacity: 0;
+    }
+}
+        @keyframes blinkCrsor {
+
+            0% {
+                opacity: 1;
+                /* filter: blur(10px); */
+                /* transform: scale(0); */
+                top: -5vh;
+            }
+
+
+            100% {
+                opacity: 0;
+                /* transform: scale(5); */
+                top: 100vh;
+            }
+        }
+
+        ul li:nth-child(1) {
+            left: 40%;
+           
+            animation: blinkCrsor 3s ease-in-out 1s infinite;
+            background: rgb(185, 219, 60);
+        }
+
+        ul li:nth-child(2) {
+            left: 50%;
+
+            animation: blinkCrsor 2.5s ease-in-out infinite;
+            background: rgb(60, 219, 60);
+        }
+
+        ul li:nth-child(3) {
+            left: 60%;
+
+            animation: blinkCrsor 4s ease-in-out infinite;
+            background: rgb(60, 187, 219);
+        }
+
+        ul li:nth-child(4) {
+            left: 60%;
+
+            animation: blinkCrsor 3s ease-in-out infinite;
+            background: rgb(63, 60, 219);
+        }
+
+        ul li:nth-child(5) {
+            left: 25%;
+
+            animation: blinkCrsor 3.5s ease-in-out infinite;
+            background: rgb(219, 60, 153);
+        }
+
+        ul li:nth-child(6) {
+            left: 10%;
+            animation: blinkCrsor 3s ease-in-out 1s infinite;
+            background: rgb(219, 60, 87);
+        }
+
+        ul li:nth-child(7) {
+            left: 35%;
+            top: 70%;
+            animation: blinkCrsor 3.5s ease-in-out infinite;
+            background: rgb(43, 31, 221);
+        }
+
+        ul li:nth-child(8) {
+            left: 60%;
+            
+            animation: blinkCrsor 4s ease-in-out 1s infinite;
+            background: rgb(182, 60, 219);
+        }
+
+        ul li:nth-child(9) {
+            left: 10%;
+           
+            animation: blinkCrsor 3s ease-in-out infinite;
+            background: rgb(145, 219, 60);
+        }
+
+        ul li:nth-child(10) {
+            left: 65%;
+           
+            animation: blinkCrsor 2.5s ease-in-out infinite;
+            background: rgb(219, 60, 153);
+        }
+        ul li:nth-child(11) {
+            left: 40%;
+
+            animation: blinkCrsor 3s ease-in-out 2s infinite;
+            background: rgb(185, 219, 60);
+        }
+
+        ul li:nth-child(12) {
+            left: 50%;
+
+            animation: blinkCrsor 2.5s ease-in-out 1s infinite;
+            background: rgb(60, 219, 60);
+        }
+
+        ul li:nth-child(13) {
+            left: 60%;
+
+            animation: blinkCrsor 4s ease-in-out 1s infinite;
+            background: rgb(60, 187, 219);
+        }
+
+        ul li:nth-child(14) {
+            left: 60%;
+
+            animation: blinkCrsor 3s ease-in-out 2s infinite;
+            background: rgb(63, 60, 219);
+        }
+
+        ul li:nth-child(15) {
+            left: 25%;
+
+            animation: blinkCrsor 3s ease-in-out 2s infinite;
+            background: rgb(219, 60, 153);
+        }
+
+        ul li:nth-child(16) {
+            left: 10%;
+            animation: blinkCrsor 3s ease-in-out 1s infinite;
+            background: rgb(219, 60, 87);
+        }
+
+        ul li:nth-child(17) {
+            left: 35%;
+            
+            animation: blinkCrsor 3.5s ease-in-out 2s infinite;
+            background: rgb(43, 31, 221);
+        }
+
+        ul li:nth-child(18) {
+            left: 60%;
+            
+            animation: blinkCrsor 4s ease-in-out 2s infinite;
+            background: rgb(182, 60, 219);
+        }
+
+        ul li:nth-child(19) {
+            left: 10%;
+            
+            animation: blinkCrsor 3s ease-in-out 1s infinite;
+            background: rgb(145, 219, 60);
+        }
+
+        ul li:nth-child(20) {
+            left: 65%;
+            
+            animation: blinkCrsor 2s ease-in-out 1s infinite;
+            background: rgb(113, 12, 160);
+        }
+        
+        ul li:nth-child(21) {
+            left: 72%;
+
+            animation: blinkCrsor 3s ease-in-out 1s infinite;
+            background: rgb(185, 219, 60);
+        }
+
+        ul li:nth-child(22) {
+            left: 70%;
+
+            animation: blinkCrsor 2.5s ease-in-out infinite;
+            background: rgb(60, 219, 60);
+        }
+
+        ul li:nth-child(23) {
+            left: 75%;
+
+            animation: blinkCrsor 4s ease-in-out infinite;
+            background: rgb(60, 187, 219);
+        }
+
+        ul li:nth-child(24) {
+            left: 76%;
+
+            animation: blinkCrsor 3s ease-in-out infinite;
+            background: rgb(63, 60, 219);
+        }
+
+        ul li:nth-child(25) {
+            left: 80%;
+
+            animation: blinkCrsor 3.5s ease-in-out infinite;
+            background: rgb(219, 60, 153);
+        }
+
+        ul li:nth-child(26) {
+            left: 84%;
+            animation: blinkCrsor 3s ease-in-out 1s infinite;
+            background: rgb(219, 60, 87);
+        }
+
+        ul li:nth-child(27) {
+            left: 35%;
+            
+            animation: blinkCrsor 3.5s ease-in-out infinite;
+            background: rgb(43, 31, 221);
+        }
+
+        ul li:nth-child(28) {
+            left: 88%;
+            
+            animation: blinkCrsor 4s ease-in-out 1s infinite;
+            background: rgb(182, 60, 219);
+        }
+
+        ul li:nth-child(29) {
+            left: 90%;
+           
+            animation: blinkCrsor 3s ease-in-out infinite;
+            background: rgb(145, 219, 60);
+        }
+
+        ul li:nth-child(30) {
+            left: 95%;
+           
+            animation: blinkCrsor 2.5s ease-in-out infinite;
+            background: rgb(219, 60, 153);
+        }
+        ul li:nth-child(31) {
+            left: 98%;
+
+            animation: blinkCrsor 3s ease-in-out 2s infinite;
+            background: rgb(185, 219, 60);
+        }
+
+        ul li:nth-child(32) {
+            left: 45%;
+
+            animation: blinkCrsor 2.5s ease-in-out 1s infinite;
+            background: rgb(60, 219, 60);
+        }
+
+        ul li:nth-child(33) {
+            left: 33%;
+
+            animation: blinkCrsor 4s ease-in-out 1s infinite;
+            background: rgb(60, 187, 219);
+        }
+
+        ul li:nth-child(34) {
+            left: 43%;
+
+            animation: blinkCrsor 3s ease-in-out 2s infinite;
+            background: rgb(63, 60, 219);
+        }
+
+        ul li:nth-child(35) {
+            left: 27%;
+
+            animation: blinkCrsor 3s ease-in-out 2s infinite;
+            background: rgb(219, 60, 153);
+        }
+
+        ul li:nth-child(36) {
+            left: 57%;
+            animation: blinkCrsor 3s ease-in-out 1s infinite;
+            background: rgb(219, 60, 87);
+        }
+
+        ul li:nth-child(37) {
+            left: 58%;
+            
+            animation: blinkCrsor 3.5s ease-in-out 2s infinite;
+            background: rgb(43, 31, 221);
+        }
+
+        ul li:nth-child(38) {
+            left: 63%;
+            
+            animation: blinkCrsor 4s ease-in-out 2s infinite;
+            background: rgb(182, 60, 219);
+        }
+
+        ul li:nth-child(39) {
+            left: 51%;
+            
+            animation: blinkCrsor 3s ease-in-out 1s infinite;
+            background: rgb(145, 219, 60);
+        }
+
+        ul li:nth-child(40) {
+            left: 67%;
+            
+            animation: blinkCrsor 2s ease-in-out 1s infinite;
+            background: rgb(113, 12, 160);
+        }
+        .text{
+font-size: 1.5rem;
+        }
+        .text2{
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_header">
+        
+        <svg viewBox = "0  0 200 200">
+    
+           
+            <!-- image -->
+        
+       
+       <image id="ballone" x=20 y=98 width="60" height="40" xlink:href="ballone.png"></image>
+       <image id="ballone2" x=120 y=98 width="60" height="40" xlink:href="ballone2.png"></image>
+      
+       <image x=70 y=98 width="60" height="40" xlink:href="cake.png"></image>
+       <path id="shape" d="M50,90 A70,50 0 0,1 150,90" stroke="none" fill="none" ></path>
+       <path id="shape2" d="M45,190 A180,20 0 0,1 150,190" stroke="none" fill="none" ></path>
+       <path id="shape3" d="M45,198 A180,20 0 0,1 150,198" stroke="none" fill="none" ></path>
+       
+       <text class="text center_div">
+           <textpath xlink:href="#shape">Happy Birthday </textpath>
+       </text>
+       <text  class="text2 center_div"><textpath xlink:href="#shape2">All of us wish you a day </textpath> </text>
+       <text  class="text2 center_div"><textpath xlink:href="#shape3">filled with happiness . </textpath> </text>
+          
+    </svg>
+    </div>
+    <div class="craker">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+           
+        </ul>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            margin: 0;
+            padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          background:hsl(202, 79%, 41%);
+        }
+  .container{
+            width: 1100px;
+          display: flex;
+          justify-content: space-between;
+         
+        }
+        .container img{
+            max-width: 350px;
+            transform-origin: center;
+            transform: perspective(800px) rotateY(20deg);
+            transition: 0.5s;
+            -webkit-box-reflect:below 1px linear-gradient(transparent,transparent,#000fff) ;
+        }
+        .container:hover img{
+            opacity: 0.1;
+        }
+        .container img:hover{
+            transform: perspective(800px) rotateY(0deg) ;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="hader.jpg" alt="" srcset="">
+        <img src="hader.jpg" alt="" srcset="">
+        <img src="hader.jpg" alt="" srcset="">
+    </div>
+</body>
+</html>
