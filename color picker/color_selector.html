@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .btn{
+            background: none;
+            color: #000;
+            padding: 15px 50px;
+            font-size: 1rem;
+            margin: 20px auto;
+            outline: navajowhite;
+            display: block;
+            border: 2px solid #000;
+            cursor: pointer;
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            border: 5px solid black;
+        }
+        .box{
+            min-width: 14vw;
+            width: auto;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f00;
+            border: 2px solid #fff;
+            font-size: 1rem;
+            font-weight: bolder;
+            color: #fff;
+        }
+        .test-box{
+            width: 14vw;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0c56ef;
+            font-size: 1rem;
+            font-weight: bolder;
+            color: #fff;
+        }
+        #search{
+            position: fixed;
+            top: 5.2vh;
+            left: 65vw;
+            font-size: 1rem;
+            font-weight: bolder;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn" onclick="addColor()">Refresh</button>
+    <button class="btn" onclick="loadData()" style="position: fixed;top: 0;right: 0;">Check color</button>
+    <input type="text" name="" id="search">
+    <section class="container"></section>
+    <div class="test-box" id="demo">Demo box</div>
+    <script>
+
+
+        for (let i = 0; i < 100; i++) {
+            const element = document.createElement('div');
+            element.classList.add('box');
+            document.querySelector('.container').appendChild(element);
+            
+        }
+
+        const btn = document.querySelector('.btn');
+        const randomColorBlock = document.querySelectorAll('.box');
+        function RandomHexColor(){
+            var chars = "0123456789abcdef";
+            var colorLength = 6;
+            var color = "";
+            for (let i = 0; i < colorLength; i++) {
+                const element = Math.floor(Math.random()*chars.length);
+                color += chars.substring(element,element+1);
+            }
+            return "#"+color;
+        } 
+
+        addColor();
+        function addColor(){
+            randomColorBlock.forEach(e=>{
+                var newColor = RandomHexColor();
+                e.style.backgroundColor = newColor;
+                e.innerHTML = newColor;
+                e.addEventListener('click',function(e){
+                  //  console.log(e.target);
+                    copyToClipboard(e.target);
+                    e.target.style.opacity = 0.5;
+                    setTimeout(()=>{
+                        e.target.style.opacity = 1;
+                    },500);
+                })
+            });
+        }
+
+        function copyToClipboard(id){
+            var r = document.createRange();
+            r.selectNode(id);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(r);
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+        }
+
+
+        function loadData(){
+                   var search = document.getElementById('search').value;//console.log(search)
+                   var demo = document.getElementById('demo').style.background = search;  
+        }
+    </script>
+</body>
+</html>
