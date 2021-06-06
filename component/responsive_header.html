@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 100px;
+            background: #5b639c;
+
+        }
+
+        header .logo {
+            position: relative;
+            font-size: 1rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            width: 30%;
+            height: 2.5rem;
+        }
+        .logo h1 {
+            text-transform: uppercase;
+            animation: agre 2s alternate infinite;
+        }
+
+        @keyframes agre {
+            0% {
+                padding-left: 10px;
+            }
+
+            100% {
+                padding-left: 30px;
+            }
+        }
+
+        header .navigation {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 10px 0;
+
+        }
+
+        header .navigation li {
+            list-style: none;
+            margin: 0 10px;
+        }
+
+        header .navigation li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+
+        }
+
+        header .navigation li a:hover {
+            color: #ffeb3b;
+        }
+
+        header .search {
+            position: relative;
+            width: 300px;
+            height: 40px;
+        }
+
+        header .search input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            background-color: transparent;
+            outline: none;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        header .search input::placeholder {
+
+            color: #fff;
+        }
+
+        header .search .fa-search {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            color: #fff;
+            border-left: 1px solid #fff;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .banner {
+            background: #434978;
+            padding: 200px 100px 100px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .banner .contact {
+            max-width: 700px;
+        }
+
+        .banner .contact h2 {
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        .banner .contact p {
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .banner .contact a {
+            display: inline-block;
+            background: #fff;
+            color: #434978;
+            padding: 8px 20px ;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        .banner .image{
+            filter: invert(1);
+            max-width: 400px;
+            margin-left: 50px;
+        }
+        @media (max-width: 991px){
+            header{
+
+                padding: 10px 20px;
+                flex-direction: column;
+            }
+            header .logo{
+                width: 40%;
+                font-size: 14px;
+            }
+            .banner{
+                padding: 150px 20px 50px;
+                flex-direction: column-reverse;
+            }
+            .banner .image{
+              margin-left: 0;
+              max-width: 80%;
+               }
+               .banner .contact h2{
+                   font-size: 2rem;
+                  
+               }
+        }
+        @media(max-width: 600px )
+        {
+            header .logo{
+                width: 50%;
+                font-size: 10px;
+            }
+header .search {
+    width: 100%;
+}
+.banner .image{
+    margin-top: 30px;
+}
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- <a href="#" class="logo"> <h1>New Website</h1></a> -->
+       <div class="logo"><h1>New Website</h1></div>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tv shows</a></li>
+            <li><a href="#">Movie</a></li>
+            <li><a href="#">latest</a></li>
+            <li><a href="#">My List</a></li>
+
+        </ul>
+        <div class="search">
+            <input type="text" name="" id="" placeholder="search">
+            <i class="fas fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+    <div class="banner">
+        <div class="contact">
+            <h2>Responsive Header Design</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur harum iste, voluptatem quae
+                dignissimos aliquam quo libero veniam, pariatur sint quaerat tempore quis eligendi. Nobis molestiae
+                dolores accusamus incidunt veniam perspiciatis itaque sint a expedita sapiente vitae sed, saepe, velit
+                neque laboriosam excepturi minima quibusdam aspernatur ab nostrum. Amet necessitatibus quo ut corporis
+                ducimus vero quibusdam ipsum tempore consequuntur impedit?
+            </p>
+            <a href="#">Read More</a>
+        </div>
+        <img src="klipartz.com (2).png" alt="" srcset="" class="image">
+    </div>
+
+</body>
+
+</html>
